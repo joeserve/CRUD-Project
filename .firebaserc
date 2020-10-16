@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "skell-drone-management": {
+      "hosting": {
+        "skell-drone-management": [
+          "skell-drone-management"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div>
+    <h1>Organisations</h1>
+    <button type="button" (click)="navigateTo('organisation','add-organisation')">New Organisation</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let organisation of organisations">
+                <td>{{organisation.id}}</td>
+                <td>{{organisation.name}}</td>
+                <td>
+                    <button type="button" (click)="navigateTo('organisation',organisation.id)">Edit</button>
+                </td>
+                <td>
+                    <button type="button" (click)="deleteOrganisation(organisation.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

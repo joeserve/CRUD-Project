@@ -1,0 +1,25 @@
+<div>
+    <h1>Teams</h1>
+    <button type="button" (click)="navigateTo('teams','add-team')">New Team</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let team of teams">
+                <td>{{team.id}}</td>
+                <td>{{team.name}}</td>
+                <td>
+                    <button type="button" routerLink="/team/{{team.id}}">Edit</button>
+                </td>
+                <td>
+                    <button type="button" (click)="deleteTeam(team.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
